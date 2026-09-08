@@ -1,0 +1,449 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.82),
+            rgba(255, 255, 255, 0.82)
+        ),
+        url("https://cf.bstatic.com/xdata/images/hotel/max1024x768/643506951.jpg?k=0a0797b77c52f9ae8c0b74db9cdd817e62d3fcad83c52f8ac00a24a377a40f73&o=");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    background-color: #2f3e52;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    padding: 0 50px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+
+    position: absolute;
+    left: 50px;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 20px;
+    font-size: 17px;
+
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: orange;
+    color: #2f3e52;
+    transform: translateY(-3px);
+}
+
+/* ================= ABOUT US PAGE ================= */
+
+.about-title {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 32px;
+    color: #263445;
+}
+
+
+.team-container {
+    width: 85%;
+    margin: 50px auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+/* Member Card */
+
+.member-card {
+    width: 280px;
+    min-height: 230px;
+    background-color: white;
+    border: 2px solid #263445;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #263445;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+
+/* ================= TEAM PHOTOS ================= */
+
+.member-photo {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #263445;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+/* ================= MEMBER CARD HOVER ================= */
+
+.member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Photo Hover */
+
+.member-card:hover .member-photo {
+    transform: scale(1.08);
+    border-color: orange;
+}
+
+/* Name */
+
+.member-card h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+
+/* Text */
+
+.member-card p {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* Hover Effect */
+
+.member-card:hover {
+    transform: translateY(-10px);
+
+    background-color: #263445;
+    color: white;
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= PROFILE PAGES ================= */
+
+.profile-container {
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 70px;
+}
+
+
+.profile-card {
+    width: 500px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    border-top: 6px solid #263445;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+
+/* Card hover */
+
+.profile-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Name */
+
+.profile-card h1 {
+    color: #263445;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Line below name */
+
+.profile-line {
+    width: 80px;
+    height: 4px;
+
+    background-color: orange;
+
+    margin: 0 auto 30px;
+
+    border-radius: 5px;
+}
+
+
+/* Details section */
+
+.profile-details {
+    text-align: left;
+}
+
+
+/* Each detail */
+
+.profile-details p {
+    background-color: #f2f2f2;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    border-left: 4px solid orange;
+
+    border-radius: 5px;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+
+/* Detail hover */
+
+.profile-details p:hover {
+    background-color: #263445;
+
+    color: white;
+
+    transform: translateX(5px);
+}
+
+
+/* Labels */
+
+.profile-details span {
+    font-weight: bold;
+
+    color: #263445;
+
+    margin-right: 10px;
+}
+
+
+.profile-details p:hover span {
+    color: orange;
+}
+
+
+/* Back Button */
+
+.back-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 22px;
+
+    background-color: #263445;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+    background-color: orange;
+
+    color: #263445;
+
+    transform: translateY(-3px);
+}
+
+/* ================= HEADER ================= */
+
+/* ================= HEADER ================= */
+
+.site-header {
+    width: 100%;
+    background-color: #263445;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.site-header p {
+    margin: 8px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f5a623;
+}
+
+
+/* ================= FOOTER ================= */
+
+#footer {
+    margin-top: auto;
+}
+.site-footer {
+    width: 100%;
+
+    background-color: #263445;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px 0;
+
+    margin-top: auto;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 16px;
+}
+/* ================= VISIT COUNTER ================= */
+
+.visit-counter {
+    width: fit-content;
+
+    margin: 20px auto;
+
+    padding: 10px 20px;
+
+    background-color: #263445;
+
+    color: white;
+
+    border-radius: 20px;
+
+    font-size: 16px;
+}
+
+.visit-counter span {
+    color: orange;
+    font-weight: bold;
+}
+
+
+/* ================= WELCOME MESSAGE ================= */
+
+.welcome-box {
+    position: fixed;
+
+    right: 30px;
+    bottom: 80px;
+
+    width: 180px;
+
+    background-color: #263445;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+
+    z-index: 100;
+}
+
+
+/* Welcome title */
+
+.welcome-title {
+    color: orange;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+/* Hidden message */
+
+.welcome-text {
+    display: none;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* Show message when mouse is over Welcome */
+
+.welcome-box:hover .welcome-text {
+    display: block;
+}
