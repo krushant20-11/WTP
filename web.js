@@ -3,7 +3,7 @@
 const headerHTML = `
 <header class="site-header">
     <h1 id="headerTitle">Welcome to Webpage</h1>
-    <p id="headerSubtitle">Student ID: GMCA</p>
+ <p id="headerSubtitle">Student ID: GMCA</p>
 </header>`;
 
 const navHTML = `
@@ -19,10 +19,10 @@ const navHTML = `
                 <li><a href="ronak.html">26GMCA37</a></li>
             </ul>
         </li>
-        <li><a href="calculator.html">Calculator</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="data.html">Data</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
     </ul>
 </nav>`;
 
@@ -45,6 +45,8 @@ function updateHeaderForPage() {
 
     const pageUrl = window.location.href.toLowerCase();
 
+    if (headerSubEl) headerSubEl.style.display = "block";
+
     if (pageUrl.includes("krushant.html")) {
         if (headerTitleEl) headerTitleEl.innerText = "Welcome to Krushant Mulani Webpage";
         if (headerSubEl) headerSubEl.innerText = "Student ID: 26GMCA43";
@@ -61,8 +63,8 @@ function updateHeaderForPage() {
         if (headerTitleEl) headerTitleEl.innerText = "Welcome to Calculator Page";
         if (headerSubEl) headerSubEl.innerText = "Government MCA College, Maninagar";
     } else if (pageUrl.includes("data.html")) {
-        if (headerTitleEl) headerTitleEl.innerText = "Welcome to Hotel Management Data Page";
-        if (headerSubEl) headerSubEl.innerText = "Government MCA College, Maninagar";
+        if (headerTitleEl) headerTitleEl.innerText = "Hotel Room Booking Form";
+        if (headerSubEl) headerSubEl.style.display = "none";
     }
 }
 
@@ -131,7 +133,7 @@ if (footerEl) {
 
 /* ================= HOME PAGE ================= */
 
-/* ================= HOME PAGE 5-SECOND WELCOME MODAL & VISIT COUNTER ================= */
+/* ================= HOME PAGE 3-SECOND WELCOME MODAL & VISIT COUNTER ================= */
 
 function closeWelcomeModal() {
     const modal = document.getElementById("firstVisitModal");
@@ -165,16 +167,13 @@ function initWelcomeModal() {
             visitCountEl.innerText = visitCount;
         }
 
-        // Clear legacy localStorage flag if present
-        localStorage.removeItem("hasSeenWelcomeModal");
-
         // Show 5-second welcome modal on first visit of session (do NOT show on refresh)
         const hasSeenModal = sessionStorage.getItem("hasSeenWelcomeModal");
         if (!hasSeenModal) {
             sessionStorage.setItem("hasSeenWelcomeModal", "true");
 
             modal.style.display = "flex";
-            let timeLeft = 5;
+            let timeLeft = 3;
             if (timerEl) timerEl.innerText = timeLeft;
 
             const countdownInterval = setInterval(() => {
@@ -334,7 +333,7 @@ function validateDatesLive() {
 
     const now = new Date();
     const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
-    
+
     const checkIn = checkInEl.value;
     const checkOut = checkOutEl.value;
 
@@ -371,7 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const msgEl = document.getElementById("dataSubmittedMsg");
         if (msgEl) {
             msgEl.style.display = "block";
-            
+
             // Auto hide message after 3 seconds (3000ms)
             setTimeout(() => {
                 msgEl.style.display = "none";

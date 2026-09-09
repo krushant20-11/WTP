@@ -366,8 +366,6 @@ body {
 
 /* ================= HEADER ================= */
 
-/* ================= HEADER ================= */
-
 .site-header {
     width: 100%;
     background-color: #263445;
@@ -433,62 +431,4 @@ body {
 .visit-counter span {
     color: orange;
     font-weight: bold;
-}
-
-
-/* ================= WELCOME MESSAGE ================= */
-
-.welcome-box {
-    position: fixed;
-
-    right: 30px;
-    bottom: 80px;
-
-    width: 180px;
-
-    background-color: #263445;
-
-    color: white;
-
-    padding: 15px;
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-
-    cursor: pointer;
-
-    z-index: 100;
-}
-
-
-/* Welcome title */
-
-.welcome-title {
-    color: orange;
-
-    font-size: 18px;
-
-    font-weight: bold;
-}
-
-/* Hidden message */
-
-.welcome-text {
-    display: none;
-
-    margin-top: 10px;
-
-    font-size: 14px;
-
-    line-height: 1.5;
-}
-
-
-/* Show message when mouse is over Welcome */
-
-.welcome-box:hover .welcome-text {
-    display: block;
 }
