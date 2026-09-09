@@ -30,6 +30,11 @@ const footerHTML = `
 <div style="background-color: #f8f9fa; padding: 6px 0; text-align: center; border-top: 1px solid #e2e8f0;">
     <div class="visit-counter" style="background-color: #ffffff; color: #263445; border: 1px solid #d1d5db; border-radius: 20px; padding: 5px 18px; font-size: 15px; font-weight: bold; display: inline-block; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); margin: 0;">
         👤 Visitor: <span id="visitCount">0</span>
+
+         <button onclick="resetVisitCounter()" 
+            style="margin-left: 10px; padding: 4px 10px; cursor: pointer;">
+            Reset
+         </button>
     </div>
 </div>
 <footer class="site-footer">    
@@ -73,6 +78,16 @@ function updateVisitCounterOnPage() {
     if (visitCountEl) {
         let visitCount = localStorage.getItem("visitCount") || 1;
         visitCountEl.innerText = visitCount;
+    }
+}
+
+function resetVisitCounter() {
+    localStorage.setItem("visitCount", "0");
+
+    const visitCountEl = document.getElementById("visitCount");
+
+    if (visitCountEl) {
+        visitCountEl.innerText = "0";
     }
 }
 
